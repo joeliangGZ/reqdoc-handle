@@ -1,0 +1,16 @@
+2025-04-21 11:36:46.080 [main] [] INFO  StartupInfoLogger.java - Starting Application using Java 1.8.0_171 on LPSCHN22L0328 with PID 92816 (C:\Users\PCCW Solutions\Desktop\工作\AI Innovate\req-handle\reqdoc-handle\target\classes started by PCCW Solutions in C:\Users\PCCW Solutions\Desktop\工作\AI Innovate\req-handle\reqdoc-handle) 
+2025-04-21 11:36:46.087 [main] [] INFO  SpringApplication.java - No active profile set, falling back to default profiles: default 
+2025-04-21 11:36:49.581 [main] [] INFO  TomcatWebServer.java - Tomcat initialized with port(s): 8095 (http) 
+2025-04-21 11:36:49.599 [main] [] INFO  DirectJDKLog.java - Initializing ProtocolHandler ["http-nio-8095"] 
+2025-04-21 11:36:49.600 [main] [] INFO  DirectJDKLog.java - Starting service [Tomcat] 
+2025-04-21 11:36:49.601 [main] [] INFO  DirectJDKLog.java - Starting Servlet engine: [Apache Tomcat/9.0.50] 
+2025-04-21 11:36:49.852 [main] [] INFO  DirectJDKLog.java - Initializing Spring embedded WebApplicationContext 
+2025-04-21 11:36:49.853 [main] [] INFO  ServletWebServerApplicationContext.java - Root WebApplicationContext: initialization completed in 3678 ms 
+2025-04-21 11:36:50.776 [main] [] INFO  UserDetailsServiceAutoConfiguration.java - 
+
+Using generated security password: 8b746bc5-595b-44b9-a4ae-d8411c29afed
+ 
+2025-04-21 11:36:51.027 [main] [] INFO  DefaultSecurityFilterChain.java - Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@40709f9, org.springframework.security.web.context.SecurityContextPersistenceFilter@2e62ead7, org.springframework.security.web.header.HeaderWriterFilter@41d16cc3, org.springframework.security.web.authentication.logout.LogoutFilter@5b39a3e6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1cf336fd, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@bf75b5c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67bf0480, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6b1b19cf, org.springframework.security.web.session.SessionManagementFilter@2e43c38d, org.springframework.security.web.access.ExceptionTranslationFilter@7c369270, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1095d23a] 
+2025-04-21 11:36:51.089 [main] [] INFO  DirectJDKLog.java - Starting ProtocolHandler ["http-nio-8095"] 
+2025-04-21 11:36:51.156 [main] [] INFO  TomcatWebServer.java - Tomcat started on port(s): 8095 (http) with context path '/req-doc' 
+2025-04-21 11:36:51.173 [main] [] INFO  StartupInfoLogger.java - Started Application in 6.002 seconds (JVM running for 7.717) 

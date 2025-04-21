@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration sacn="true" scanPeriod="30 seconds">
+    <!-- <property name="USER_HOME" value="/opt/otthub-app" /> -->
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <!-- encoders are assigned the type
+             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default -->
+        <encoder>
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{UUID}] %-5level %logger{35} - %msg %n</pattern> -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%X{UUID}] %-5p %F - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Insert the current time formatted as "yyyyMMdd'T'HHmmss" under
+         the key "bySecond" into the logger context. This value will be
+         available to all subsequent configuration elements. -->
+    <timestamp key="bySecond" datePattern="yyyyMMdd'T'HHmmss"/>
+
+<!--    <appender name="FILE" class="ch.qos.logback.core.FileAppender">-->
+<!--        &lt;!&ndash; <file>${USER_HOME}/logs/intghub-${bySecond}.log</file> &ndash;&gt;-->
+<!--        <file>./logs/IMSApiAdaptor-${bySecond}.log</file>-->
+<!--        <append>true</append>-->
+<!--        &lt;!&ndash; encoders are assigned the type-->
+<!--             ch.qos.logback.classic.encoder.PatternLayoutEncoder by default &ndash;&gt;-->
+<!--        <encoder>-->
+<!--            &lt;!&ndash; <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{UUID}] %-5level %logger{35} - %msg%n</pattern> &ndash;&gt;-->
+<!--            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%X{UUID}] %-5p %F - %msg %n</pattern>-->
+<!--        </encoder>-->
+<!--    </appender>-->
+
+    <appender name="DAYFILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- <file>${USER_HOME}/logs/intghub.log</file> -->
+        <file>./logs/reqdoc.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>./logs/CsnetApiAdaptor.%d{yyyy-MM-dd}.log</fileNamePattern>
+
+            <!-- keep 30 days' worth of history capped at 3GB total size -->
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>3GB</totalSizeCap>
+        </rollingPolicy>
+
+        <encoder>
+            <!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] [%X{UUID}] %-5level %logger{35} - %msg%n</pattern> -->
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] [%X{UUID}] %-5p %F - %msg %n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="DAYFILE"/>
+<!--        <appender-ref ref="FILE"/>-->
+    </root>
+</configuration>
